@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <display-name>Langue</display-name>
+        <servlet-name>Langue</servlet-name>
+        <servlet-class>mg.hrz.postgis.presentation.LangueControllerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>Success</display-name>
+        <servlet-name>Success</servlet-name>
+        <servlet-class>mg.hrz.postgis.presentation.SuccessControllerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>Geometry</display-name>
+        <servlet-name>Geometry</servlet-name>
+        <servlet-class>mg.hrz.postgis.presentation.GeometryControllerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>GeoJson</display-name>
+        <servlet-name>GeoJson</servlet-name>
+        <servlet-class>mg.hrz.postgis.presentation.GeoJsonControllerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Langue</servlet-name>
+        <url-pattern>/langue</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Success</servlet-name>
+        <url-pattern>/success</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Geometry</servlet-name>
+        <url-pattern>/gis</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GeoJson</servlet-name>
+        <url-pattern>/geojson</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>/WEB-INF/register.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
